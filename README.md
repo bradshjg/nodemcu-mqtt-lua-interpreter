@@ -28,7 +28,7 @@ which will configure pin 1 in output mode and set it high.
 
 If a reply is desired, you can pass a "reply-to" key in the JSON payload, e.g.
 
-`mosquitto_sub -h <host> -t /lua-interpreter`
+`mosquitto_sub -h <host> -t /reply`
 
 and then in another shell
 
