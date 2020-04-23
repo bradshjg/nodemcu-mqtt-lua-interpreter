@@ -1,6 +1,6 @@
 # nodemcu-mqtt-lua-interpreter
 
-Use mqtt to pass chunks to be interpreted, allows for responses on another topic.
+Use mqtt to publish chunks to be interpreted (and optionally publish return value on another topic).
 
 ## Getting Started
 
