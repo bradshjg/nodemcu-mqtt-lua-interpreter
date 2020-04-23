@@ -22,7 +22,7 @@ Modify `init.lua` with your MQTT host.
 
 Send a mqtt message to be interpreted, e.g.
 
-`mosquitto_pub -h <host> -t /lua-interpreter -m '{"chunk": "gpio.mode(1, gpio.OUTPUT) gpio.write(1, gpio.HIGH)}'`
+`mosquitto_pub -h <host> -t /lua-interpreter -m '{"chunk": "gpio.mode(1, gpio.OUTPUT) gpio.write(1, gpio.HIGH)"}'`
 
 which will configure pin 1 in output mode and set it high.
 
@@ -32,6 +32,6 @@ mosquitto_sub -h <host> -t /lua-interpreter
 
 and then in another shell
 
-mosquitto_pub -h <host> -t /lua-interpreter -m '{"chunk": "return gpio.read(1)", "reply-to": "/reply"}'
+`mosquitto_pub -h <host> -t /lua-interpreter -m '{"chunk": "return gpio.read(1)", "reply-to": "/reply"}'`
 
 which will read pin 1 (should be 1 now) and we receive that response on the /reply topic.
